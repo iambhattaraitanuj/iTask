@@ -48,6 +48,8 @@ const App = () => {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
+
+        //handle error
         if (response.data.error === "Unauthorized") {
           toast.error("Unauthorized. Please login", {
             theme: "colored",
