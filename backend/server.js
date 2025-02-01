@@ -4,7 +4,6 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import bodyParser from "body-parser";
-import serverless from "serverless-http";
 
 const port = 3001;
 mongoose.connect("mongodb://localhost:27017/todolist");
@@ -20,5 +19,6 @@ app.get("/", async (req, res) => {
   res.send("I am server");
 });
 
-// Export the serverless function handler for Vercel
-export const handler = serverless(app);
+app.listen(port, () => {
+  console.log(`Server starting on http://localhost:${port}`);
+});
