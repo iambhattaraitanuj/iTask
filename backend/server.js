@@ -19,6 +19,5 @@ app.get("/", async (req, res) => {
   res.send("I am server");
 });
 
-app.listen(port, () => {
-  console.log(`Server starting on http://localhost:${port}`);
-});
+// Export the serverless function handler for Vercel
+export const handler = serverless(app);
