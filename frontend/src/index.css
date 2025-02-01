@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+    width: 12px;
+    background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, rgb(168, 165, 165), rgb(191, 191, 194), rgb(168, 165, 165));
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(to right, rgb(138, 126, 126), rgb(163, 163, 165), rgb(138, 126, 126));
+}
